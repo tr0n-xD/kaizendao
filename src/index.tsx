@@ -6,13 +6,15 @@ import App from './App';
 
 import './i18n';
 import Corp from "./Corp";
+import Daos from "./Daos";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App/>}/>
-        <Route path='/corp' element={<Corp />}/>
+        <Route path='/corp' element={<Corp/>}/>
+        <Route path='/daos' element={<Daos/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

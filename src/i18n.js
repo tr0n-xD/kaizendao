@@ -20,6 +20,10 @@ i18n
             choose: 'Please choose your Corporation',
             toyota: 'Toyota Motor Corporation',
           },
+          daos: {
+            title: 'The DAOs in your corporation are listed here:',
+            create: 'Create a new DAO',
+          },
         },
       },
       jp: {
