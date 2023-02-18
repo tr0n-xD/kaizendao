@@ -15,8 +15,12 @@ i18n
             name: 'Kaizen DAO',
             title: 'Welcome to Kaizen DAO',
             start: 'Start',
-          }
-        }
+          },
+          corp: {
+            choose: 'Please choose your Corporation',
+            toyota: 'Toyota Motor Corporation',
+          },
+        },
       },
       jp: {
         translation: {
@@ -24,8 +28,12 @@ i18n
             name: '改善道',
             title: 'カイゼン道へようこそ',
             start: '始める',
-          }
-        }
+          },
+          corp: {
+            choose: 'あなたの会社を選んでください',
+            toyota: 'トヨタ自動車株式会社',
+          },
+        },
       }
     }
   });
