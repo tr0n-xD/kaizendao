@@ -15,15 +15,43 @@ export default function DaoCreate() {
         <div>
           {t('daocreate.title')}
         </div>
-        <div>
-          {t('daocreate.name')}
+
+        <div className='flexColumn gap5'>
+          <div>
+            {t('daocreate.name')}
+          </div>
+          <div>
+            <input maxLength={50} style={{width: '250px'}}/>
+          </div>
         </div>
-        <div>
-          {t('daocreate.purpose')}
+
+        <div className='flexColumn gap5'>
+          <div>
+            {t('daocreate.purpose')}
+          </div>
+          <div>
+            <input maxLength={150} style={{width: '350px'}}/>
+          </div>
         </div>
-        <div>
-          {t('daocreate.success')}
+
+        <div className='flexColumn gap5'>
+          <div>
+            {t('daocreate.success')}
+          </div>
+          <div>
+            <input maxLength={150} style={{width: '350px'}}/>
+          </div>
         </div>
+
+        <div className='flexColumn gap5'>
+          <div>
+            {t('daocreate.icon')}
+          </div>
+          <div className='flexRow'>
+            <div></div>
+          </div>
+        </div>
+
         <div className='flexColumn' style={{}}>
           <button className='whiteButton'>{t('daocreate.create')}</button>
         </div>

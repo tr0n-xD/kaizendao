@@ -29,6 +29,7 @@ i18n
             name: 'Name of the DAO',
             purpose: 'Purpose of the DAO',
             success: 'Success criteria of the DAO',
+            icon: 'Choose an icon for the DAO',
             create: 'Create DAO',
           },
         },
