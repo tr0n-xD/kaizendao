@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function Daos() {
   const {t} = useTranslation();
