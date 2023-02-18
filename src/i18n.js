@@ -24,6 +24,13 @@ i18n
             title: 'The DAOs in your corporation are listed here:',
             create: 'Create a new DAO',
           },
+          daocreate: {
+            title: 'Create a DAO for your corporation:',
+            name: 'Name of the DAO',
+            purpose: 'Purpose of the DAO',
+            success: 'Success criteria of the DAO',
+            create: 'Create DAO',
+          },
         },
       },
       jp: {
