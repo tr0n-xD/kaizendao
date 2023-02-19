@@ -80,3 +80,15 @@ a:link, a:visited {
 .alignStart {
   align-items: flex-start;
 }
+
+.fieldInput {
+  font-size: 20px;
+  /*font-weight: bold;*/
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+  border: solid 2px mediumpurple;
+  border-radius: 20px;
+  /*background-color: black;*/
+  /*color: red;*/
+}

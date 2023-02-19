@@ -21,7 +21,7 @@ export default function DaoCreate() {
             {t('daocreate.name')}
           </div>
           <div>
-            <input maxLength={50} style={{width: '250px'}}/>
+            <input className='fieldInput' maxLength={50} style={{width: '250px'}}/>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function DaoCreate() {
             {t('daocreate.purpose')}
           </div>
           <div>
-            <input maxLength={150} style={{width: '350px'}}/>
+            <input className='fieldInput' maxLength={150} style={{width: '350px'}}/>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function DaoCreate() {
             {t('daocreate.success')}
           </div>
           <div>
-            <input maxLength={150} style={{width: '350px'}}/>
+            <textarea className='fieldInput' maxLength={150} style={{height: '100px', width: '350px'}}/>
           </div>
         </div>
 
