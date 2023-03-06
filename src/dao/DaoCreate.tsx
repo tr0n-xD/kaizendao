@@ -21,7 +21,7 @@ export default function DaoCreate() {
             {t('daocreate.name')}
           </div>
           <div>
-            <input className='fieldInput' maxLength={50} style={{width: '250px'}}/>
+            <input className='fieldInput' maxLength={50} style={{width: '250px'}} value={'Engineering DAO'}/>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function DaoCreate() {
             {t('daocreate.purpose')}
           </div>
           <div>
-            <input className='fieldInput' maxLength={150} style={{width: '350px'}}/>
+            <input className='fieldInput' maxLength={150} style={{width: '350px'}} value={'Improve engineering processes'}/>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function DaoCreate() {
             {t('daocreate.success')}
           </div>
           <div>
-            <textarea className='fieldInput' maxLength={150} style={{height: '100px', width: '350px'}}/>
+            <textarea className='fieldInput' maxLength={150} style={{height: '100px', width: '350px'}} value={'The engineering processes have been improved, the time to delivery is lower and the measured quality is higher'}/>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ export default function DaoCreate() {
         </div>
 
         <div className='flexColumn' style={{}}>
-          <button className='whiteButton'>{t('daocreate.create')}</button>
+          <Link to='/daohome'><button className='whiteButton'>{t('daocreate.create')}</button></Link>
         </div>
       </div>
     </div>

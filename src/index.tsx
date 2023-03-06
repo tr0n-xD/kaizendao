@@ -6,8 +6,9 @@ import App from './App';
 
 import './i18n';
 import Corp from "./Corp";
-import Daos from "./Daos";
-import DaoCreate from "./DaoCreate";
+import Daos from "./dao/Daos";
+import DaoCreate from "./dao/DaoCreate";
+import DaoHome from "./dao/DaoHome";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path='/corp' element={<Corp/>}/>
         <Route path='/daos' element={<Daos/>}/>
         <Route path='/daocreate' element={<DaoCreate/>}/>
+        <Route path='/daohome' element={<DaoHome/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
