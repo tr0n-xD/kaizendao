@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 import { Link } from "react-router-dom";
-import { PropositionRow } from "../proposition/PropositionRow";
+import { PropositionPanel } from "../proposition/PropositionPanel";
 
 export default function DaoHome() {
   const {t} = useTranslation();
@@ -23,10 +23,7 @@ export default function DaoHome() {
           <div>
             Engineering DAO
           </div>
-          <div className='flexColumn gap5' style={{height: '200px', padding: '20px', borderRadius: '10px'}}>
-            <div style={{fontSize: '20px'}}>Active DAO propositions:</div>
-            {propositions.map(p => (<PropositionRow p={p}/>))}
-          </div>
+          <PropositionPanel propositions={propositions} />
           <div style={{fontSize: '20px'}}>
             Your tokens: 25
           </div>
