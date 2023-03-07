@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 export default function DaoHome() {
   const {t} = useTranslation();
 
-  const ideas = [
-    {id: 1, desc: 'Improve material quality', points: 25, totalPoints: 100},
-    {id: 2, desc: 'Change Battery Supplier', points: 5, totalPoints: 100},
-    {id: 3, desc: 'Implement Training Program', points: 0, totalPoints: 100},
-  ]
-
   return (
       <div className="App">
         <div className='flexColumn gap20'>
