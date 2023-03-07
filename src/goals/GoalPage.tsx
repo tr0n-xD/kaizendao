@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 import { Link } from "react-router-dom";
-import { IdeaPanel } from "../idea/IdeaPanel";
+import { GoalPanel } from "./GoalPanel";
+import { Goal } from "../Types";
 
-export default function IdeaPage() {
+export default function GoalPage() {
   const {t} = useTranslation();
 
-  const ideas = [
-    {id: 1, desc: 'Improve material quality', points: 25, totalPoints: 100},
-    {id: 2, desc: 'Change Battery Supplier', points: 5, totalPoints: 100},
-    {id: 3, desc: 'Implement Training Program', points: 0, totalPoints: 100},
+  const goals : Goal[] = [
+    {id: 1, desc: 'Quality is improved'},
+    {id: 2, desc: 'Time to market is reduced'},
   ]
 
   return (
@@ -23,7 +23,7 @@ export default function IdeaPage() {
           <div>
             Engineering DAO: Ideas
           </div>
-          <IdeaPanel ideas={ideas} />
+          <GoalPanel goals={goals} />
           <div style={{fontSize: '20px'}}>
             Your tokens: 25
           </div>
