@@ -21,7 +21,7 @@ export default function GoalPage() {
             <div>{t('welcome.name')} - {t('corp.toyota')}</div>
           </div>
           <div>
-            Engineering DAO: Ideas
+            Engineering DAO: Goals
           </div>
           <GoalPanel goals={goals} />
           <div style={{fontSize: '20px'}}>
