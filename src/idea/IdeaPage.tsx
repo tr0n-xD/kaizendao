@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 import { Link } from "react-router-dom";
+import { IdeaPanel } from "../idea/IdeaPanel";
 
-export default function DaoHome() {
+export default function IdeaPage() {
   const {t} = useTranslation();
 
   const ideas = [
@@ -20,13 +21,9 @@ export default function DaoHome() {
             <div>{t('welcome.name')} - {t('corp.toyota')}</div>
           </div>
           <div>
-            Engineering DAO
+            Engineering DAO: Ideas
           </div>
-          <div className='flexColumn' style={{minHeight: '250px'}}>
-            <Link to='/people'><button className='whiteButton'>PEOPLE</button></Link>
-            <Link to='/ideas'><button className='whiteButton'>IDEAS</button></Link>
-            <Link to='/goals'><button className='whiteButton'>GOALS</button></Link>
-          </div>
+          <IdeaPanel ideas={ideas} />
           <div style={{fontSize: '20px'}}>
             Your tokens: 25
           </div>
