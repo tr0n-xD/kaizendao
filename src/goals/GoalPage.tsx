@@ -2,14 +2,16 @@ import { useTranslation } from "react-i18next";
 import React from "react";
 import { Link } from "react-router-dom";
 import { GoalPanel } from "./GoalPanel";
-import { Goal } from "../Types";
+import { Goal } from "../dao/DaoTypes";
 
 export default function GoalPage() {
   const {t} = useTranslation();
 
   const goals : Goal[] = [
-    {id: 1, desc: 'Quality is improved'},
-    {id: 2, desc: 'Time to market is reduced'},
+    {id: 1, desc: 'Improving productivity'},
+    {id: 2, desc: 'Reducing costs'},
+    {id: 3, desc: 'Increasing sales'},
+    {id: 4, desc: 'Exploring new business opportunities'},
   ]
 
   return (

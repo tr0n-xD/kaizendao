@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Person } from "../Types";
+import { Person } from "../dao/DaoTypes";
 import { PersonRow } from "./PersonRow";
 import { PersonInfo } from "./PersonInfo";
 import { Link } from "react-router-dom";

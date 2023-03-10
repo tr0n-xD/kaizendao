@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Goal } from "../Types";
+import { Goal } from "../dao/DaoTypes";
 import { GoalInfo } from "./GoalInfo";
 import { GoalRow } from "./GoalRow";
 import { Link } from "react-router-dom";

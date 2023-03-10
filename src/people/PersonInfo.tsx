@@ -1,4 +1,4 @@
-import { Person } from "../Types";
+import { Person } from "../dao/DaoTypes";
 
 export function PersonInfo(props: {person: Person, selectOkay: any}) {
     const x = props.person;

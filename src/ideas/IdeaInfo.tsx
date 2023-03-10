@@ -1,4 +1,4 @@
-import { Idea } from "../Types";
+import { Idea } from "../dao/DaoTypes";
 
 export function IdeaInfo(props: {idea: Idea, selectOkay: any}) {
     const x = props.idea;

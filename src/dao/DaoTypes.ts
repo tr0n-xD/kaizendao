@@ -7,8 +7,10 @@ export interface Person {
 export interface Idea {
     id: number,
     desc: string,
+    details: string,
     points: number,
     totalPoints: number,
+    status: string,
 }
 
 export interface Goal {

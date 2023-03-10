@@ -1,4 +1,4 @@
-import { Goal } from "../Types";
+import { Goal } from "../dao/DaoTypes";
 
 export function GoalInfo(props: {goal: Goal, selectOkay: any}) {
     const x = props.goal;

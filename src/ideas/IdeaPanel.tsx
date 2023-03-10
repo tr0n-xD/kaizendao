@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Idea } from "../Types";
+import { Idea } from "../dao/DaoTypes";
 import { IdeaInfo } from "./IdeaInfo";
 import { IdeaVote } from "./IdeaVote";
 import { IdeaRow } from "./IdeaRow";

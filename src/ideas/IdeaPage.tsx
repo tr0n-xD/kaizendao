@@ -1,16 +1,16 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 import { Link } from "react-router-dom";
-import { IdeaPanel } from ".//IdeaPanel";
-import { Idea } from "../Types";
+import { IdeaPanel } from "./IdeaPanel";
+import { Idea } from "../dao/DaoTypes";
 
 export default function IdeaPage() {
   const {t} = useTranslation();
 
   const ideas : Idea[] = [
-    {id: 1, desc: 'Improve material quality', points: 25, totalPoints: 100},
-    {id: 2, desc: 'Change Battery Supplier', points: 5, totalPoints: 100},
-    {id: 3, desc: 'Implement Training Program', points: 0, totalPoints: 100},
+    {id: 1, desc: 'Improve material quality', details: 'This task is about improving material quality in the production processes', points: 25, totalPoints: 100, status: 'FUNDING'},
+    {id: 2, desc: 'Change Battery Supplier', details: 'Changing the battery supplier will increase realiability of the production', points: 5, totalPoints: 100, status: 'FUNDING'},
+    {id: 3, desc: 'Implement Training Program', details: 'A training program will increase the quality of work from our workforce', points: 0, totalPoints: 100, status: 'FUNDING'},
   ]
 
   return (

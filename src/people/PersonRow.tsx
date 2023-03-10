@@ -1,4 +1,4 @@
-import { Person } from "../Types";
+import { Person } from "../dao/DaoTypes";
 
 export function PersonRow(props: {person: Person, selectPerson: any}) {
     const p = props.person;
