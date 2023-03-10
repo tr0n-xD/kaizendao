@@ -36,21 +36,21 @@ export default function DaoCreate() {
 
         <div className='flexColumn gap5'>
           <div>
-            {t('daocreate.success')}
+            {t('daocreate.objective')}
           </div>
           <div>
-            <textarea className='fieldInput' maxLength={150} style={{height: '100px', width: '350px'}} value={'The engineering processes have been improved, the time to delivery is lower and the measured quality is higher'}/>
+            <textarea className='fieldInput' maxLength={150} style={{height: '100px', width: '350px'}} value={'To improve the engineering processes, reduce the time to delivery and ensure the delivered quality is higher'}/>
           </div>
         </div>
 
-        <div className='flexColumn gap5'>
-          <div>
-            {t('daocreate.icon')}
-          </div>
-          <div className='flexRow'>
-            <div></div>
-          </div>
-        </div>
+        {/*<div className='flexColumn gap5'>*/}
+        {/*  <div>*/}
+        {/*    {t('daocreate.icon')}*/}
+        {/*  </div>*/}
+        {/*  <div className='flexRow'>*/}
+        {/*    <div></div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
 
         <div className='flexColumn' style={{}}>
           <Link to='/daohome'><button className='whiteButton'>{t('daocreate.create')}</button></Link>

@@ -28,7 +28,7 @@ i18n
             title: 'Create a DAO for your corporation:',
             name: 'Name of the DAO',
             purpose: 'Purpose of the DAO',
-            success: 'Success criteria of the DAO',
+            objective: 'Objective of the DAO',
             icon: 'Choose an icon for the DAO',
             create: 'Create DAO',
           },
