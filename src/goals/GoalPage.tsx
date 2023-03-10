@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { GoalPanel } from "./GoalPanel";
 import { Goal } from "../dao/DaoTypes";
+import TokenPanel from "../components/TokenPanel";
 
 export default function GoalPage() {
   const {t} = useTranslation();
@@ -26,9 +27,7 @@ export default function GoalPage() {
             Engineering DAO: Goals
           </div>
           <GoalPanel goals={goals} />
-          <div style={{fontSize: '20px'}}>
-            Your tokens: 25
-          </div>
+          <TokenPanel/>
         </div>
       </div>
   );

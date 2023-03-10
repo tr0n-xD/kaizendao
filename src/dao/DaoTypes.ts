@@ -8,6 +8,7 @@ export interface Idea {
     id: number,
     desc: string,
     details: string,
+    author: string,
     points: number,
     totalPoints: number,
     status: string,

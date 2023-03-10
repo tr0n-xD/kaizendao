@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import React from "react";
 import { Link } from "react-router-dom";
+import TokenPanel from "../components/TokenPanel";
 
 export default function DaoHome() {
   const {t} = useTranslation();
@@ -44,9 +45,7 @@ export default function DaoHome() {
                     </button>
                 </Link>
             </div>
-          <div style={{fontSize: '20px'}}>
-            Your tokens: 25
-          </div>
+            <TokenPanel/>
         </div>
       </div>
   );

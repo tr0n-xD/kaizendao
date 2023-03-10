@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Person } from "../dao/DaoTypes";
 import { PersonPanel } from "./PersonPanel";
+import TokenPanel from "../components/TokenPanel";
 
 export default function PersonPage() {
   const {t} = useTranslation();
@@ -26,9 +27,7 @@ export default function PersonPage() {
             Engineering DAO: People
           </div>
           <PersonPanel persons={persons} />
-          <div style={{fontSize: '20px'}}>
-            Your tokens: 25
-          </div>
+          <TokenPanel/>
         </div>
       </div>
   );

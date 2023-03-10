@@ -8,7 +8,7 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
             <div>{p.desc}</div>
             <div>{p.points} / {p.totalPoints} points</div>
             <div>Would you like to vote on this proposal?</div>
-            <div>(enter points here)</div>
+            <div>(enter tokens here)</div>
             <button className='tinyButton' onClick={props.selectOkay}>Okay</button>
         </div>
     );
