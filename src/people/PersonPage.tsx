@@ -9,10 +9,10 @@ export default function PersonPage() {
   const {t} = useTranslation();
 
   const persons : Person[] = [
-    {walletKey: 'ik5x4', name: 'Kenji', position: 'AI specialist', company: 'Toyota', points: 25},
-    {walletKey: 'nmcn4', name: 'Tr0n', position: 'lead developer', company: 'Restack.AI',points: 15},
-    {walletKey: 'k7ty3', name: 'Tori', position: 'engineer', company: 'Toyota',points: 25},
-    {walletKey: '1fdba', name: 'Alex', position: 'C.E.O.', company: 'Restack.AI', points: 10},
+    {walletKey: 'ik5x4', name: 'Kenji', avatar: 'avatar-kenji.png', position: 'AI specialist', company: 'Toyota', points: 25},
+    {walletKey: 'nmcn4', name: 'Tr0n', avatar: 'avatar-tr0n.png', position: 'lead developer', company: 'Restack.AI',points: 15},
+    {walletKey: 'k7ty3', name: 'Tori', avatar: 'avatar-tori.png', position: 'engineer', company: 'Toyota',points: 25},
+    {walletKey: '1fdba', name: 'Alex', avatar: 'avatar-alex.png', position: 'C.E.O.', company: 'Restack.AI', points: 10},
   ]
 
   return (

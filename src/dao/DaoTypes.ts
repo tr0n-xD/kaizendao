@@ -1,6 +1,7 @@
 export interface Person {
     walletKey: string,
     name: string,
+    avatar: string,
     position: string,
     company: string,
     points: number,

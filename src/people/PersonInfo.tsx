@@ -8,6 +8,7 @@ export function PersonInfo(props: {person: Person, selectOkay: any}) {
             <div style={{fontWeight: 'bold'}}>Name: {x.name}</div>
             <div>Position: {x.position}</div>
             <div>Company: {x.company}</div>
+            <img alt='' height='75px' src={x.avatar} style={{borderRadius: '38px'}}/>
             <div>Wallet key: {x.walletKey}</div>
             <div className='flexRow gap5'>
                 <div>DAO tokens</div>
