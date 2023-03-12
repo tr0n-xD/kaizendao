@@ -18,13 +18,23 @@ export function IdeaPanel(props: {ideas: Idea[]}) {
               <IdeaVote idea={selectedVote} selectOkay={() => setSelectedVote(undefined)}/>
             }
             {selectedInfo === undefined && selectedVote === undefined &&
-              <div className='flexColumn gap5'>
-                  {props.ideas.map(p =>
-                      <IdeaRow key={p.id} idea={p} selectInfo={() => setSelectedInfo(p)} selectVote={() => setSelectedVote(p)}/>
-                  )}
-                  <div style={{marginTop: '20px'}}><Link to='/daohome'><button className='whiteButton'>BACCCCCCCK</button></Link></div>
-                  <div style={{marginTop: '20px'}}><Link to='/ideas/create'><button className='whiteButton'>Create a new idea</button></Link></div>
+            <div className='flexColumn gap5'>
+                {props.ideas.map(p =>
+                    <IdeaRow key={p.id} idea={p} selectInfo={() => setSelectedInfo(p)} selectVote={() => setSelectedVote(p)}/>
+                )}
+              <div style={{marginTop: '20px'}}>
+              <Link to='/ideas/create'>
+              <button className='ovalButton bg-green'>
+                <div className='flexRow gap5'>
+                  <img alt='' height='25px' src='/icon-ideas.png'/>
+                  <div>New Idea</div>
+                </div>
+              </button>
+              </Link>
               </div>
+
+                <div style={{marginTop: '20px'}}><Link to='/daohome'><button className='whiteButton'>BACK</button></Link></div>
+            </div>
             }
         </div>
     );

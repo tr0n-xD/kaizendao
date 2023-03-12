@@ -27,7 +27,7 @@ button.whiteButton {
   background-color: lightgrey;
 }
 
-button.bigButton {
+button.bigRoundButton {
   height: 150px;
   width: 150px;
   padding: 10px;
@@ -37,7 +37,19 @@ button.bigButton {
   font-weight: bold;
 }
 
-.bigButton:hover {
+.bigRoundButton:hover {
+  background-color: lightgrey;
+}
+
+button.ovalButton {
+  padding: 5px 25px 5px 25px;
+  border-radius: 25px;
+  color: dodgerblue;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.ovalButton:hover {
   background-color: lightgrey;
 }
 

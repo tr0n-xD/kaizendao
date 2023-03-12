@@ -19,7 +19,7 @@ export default function GoalPage() {
       <div className="App">
         <div className='flexColumn gap20'>
           <div className='flexRow'>
-            <div><Link to='/'><img alt='' height='25px' src='icon-home-32.png' style={{paddingTop: '3px'}}/></Link>
+            <div><Link to='/'><img alt='' height='25px' src='/icon-home-32.png' style={{paddingTop: '3px'}}/></Link>
             </div>
             <div>{t('welcome.name')} - {t('corp.toyota')}</div>
           </div>
