@@ -20,7 +20,7 @@ export default function Daos() {
             <button className='whiteButton'>
               <div className='flexRow'>
                 <img alt='' height='50px' src='/icon-people.png'/>
-                <div>Engineering DAO</div>
+                <div>{t('daohome.mydao')}</div>
               </div>
             </button>
           </Link>

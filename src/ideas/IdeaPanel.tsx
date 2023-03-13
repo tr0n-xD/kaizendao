@@ -4,8 +4,10 @@ import { IdeaInfo } from "./IdeaInfo";
 import { IdeaVote } from "./IdeaVote";
 import { IdeaRow } from "./IdeaRow";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function IdeaPanel(props: {ideas: Idea[]}) {
+    const {t} = useTranslation();
     const [selectedInfo, setSelectedInfo] = useState<Idea | undefined>(undefined);
     const [selectedVote, setSelectedVote] = useState<Idea | undefined>(undefined);
 
@@ -27,13 +29,13 @@ export function IdeaPanel(props: {ideas: Idea[]}) {
               <button className='ovalButton bg-green'>
                 <div className='flexRow gap5'>
                   <img alt='' height='25px' src='/icon-ideas.png'/>
-                  <div>New Idea</div>
+                  <div>{t('idea.new')}</div>
                 </div>
               </button>
               </Link>
               </div>
 
-                <div style={{marginTop: '20px'}}><Link to='/daohome'><button className='whiteButton'>BACK</button></Link></div>
+                <div style={{marginTop: '20px'}}><Link to='/daohome'><button className='whiteButton'>{t('common.back').toUpperCase()}</button></Link></div>
             </div>
             }
         </div>

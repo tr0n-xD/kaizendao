@@ -1,7 +1,9 @@
 import { Idea } from "../dao/DaoTypes";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function IdeaRow(props: {idea: Idea, selectInfo: any, selectVote: any}) {
+    const {t} = useTranslation();
     const x = props.idea;
     return (
         <div className='flexRow justifyStart gap5' style={{width: '650px', color: 'black', backgroundColor: 'mediumspringgreen', borderRadius: '10px', padding: '5px 10px 5px 10px', fontSize: '15px', textAlign: 'left'}}>
@@ -17,8 +19,8 @@ export function IdeaRow(props: {idea: Idea, selectInfo: any, selectVote: any}) {
             {x.status !== 'FUNDING' &&
               <div style={{width: '120px', fontWeight: 'bold', textAlign: 'center'}}>{x.status}</div>
             }
-            <button className='tinyButton' onClick={props.selectInfo}>Info</button>
-            <button className='tinyButton' onClick={props.selectVote}>Vote</button>
+            <button className='tinyButton' onClick={props.selectInfo}>{t('common.info')}</button>
+            <button className='tinyButton' onClick={props.selectVote}>{t('common.vote')}</button>
         </div>
     );
 }

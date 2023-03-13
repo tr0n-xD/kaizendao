@@ -23,7 +23,7 @@ export default function IdeaPage() {
             <div>{t('welcome.name')} - {t('corp.toyota')}</div>
           </div>
           <div>
-            Engineering DAO: Ideas
+            {t('daohome.mydao')}: {t('daohome.ideas')}
           </div>
           <IdeaPanel ideas={ideas} />
           <TokenPanel />

@@ -24,7 +24,7 @@ export default function PersonPage() {
             <div>{t('welcome.name')} - {t('corp.toyota')}</div>
           </div>
           <div>
-            Engineering DAO: People
+            {t('daohome.mydao')}: {t('daohome.people')}
           </div>
           <PersonPanel persons={persons} />
           <TokenPanel/>

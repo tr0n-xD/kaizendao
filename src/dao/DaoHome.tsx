@@ -15,7 +15,7 @@ export default function DaoHome() {
             <div>{t('welcome.name')} - {t('corp.toyota')}</div>
           </div>
           <div>
-            Engineering DAO
+              {t('daohome.mydao')}
           </div>
             <div className='flexColumn' style={{minHeight: '250px'}}>
                 <div className='flexRow'>
@@ -23,7 +23,7 @@ export default function DaoHome() {
                         <button className='bigRoundButton bg-yellow'>
                             <div className='flexColumn gap5'>
                                 <img alt='' height='50px' src='/icon-people.png'/>
-                                <div>PEOPLE</div>
+                                <div>{t('daohome.people').toUpperCase()}</div>
                             </div>
                         </button>
                     </Link>
@@ -31,7 +31,7 @@ export default function DaoHome() {
                         <button className='bigRoundButton bg-blue'>
                             <div className='flexColumn gap5'>
                                 <img alt='' height='50px' src='/icon-goals.png'/>
-                                <div>GOALS</div>
+                                <div>{t('daohome.goals').toUpperCase()}</div>
                             </div>
                         </button>
                     </Link>
@@ -40,7 +40,7 @@ export default function DaoHome() {
                     <button className='bigRoundButton bg-green'>
                         <div className='flexColumn gap5'>
                             <img alt='' height='50px' src='/icon-ideas.png'/>
-                            <div>IDEAS</div>
+                            <div>{t('daohome.ideas').toUpperCase()}</div>
                         </div>
                     </button>
                 </Link>

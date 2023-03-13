@@ -3,8 +3,10 @@ import { Goal } from "../dao/DaoTypes";
 import { GoalInfo } from "./GoalInfo";
 import { GoalRow } from "./GoalRow";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export function GoalPanel(props: {goals: Goal[]}) {
+    const {t} = useTranslation();
     const [selectedInfo, setSelectedInfo] = useState<Goal | undefined>(undefined);
 
     return (
@@ -17,7 +19,7 @@ export function GoalPanel(props: {goals: Goal[]}) {
                   {props.goals.map(p =>
                       <GoalRow key={p.id} goal={p} selectInfo={() => setSelectedInfo(p)}/>
                   )}
-                  <div style={{marginTop: '20px'}}><Link to='/daohome'><button className='whiteButton'>BACK</button></Link></div>
+                  <div style={{marginTop: '20px'}}><Link to='/daohome'><button className='whiteButton'>{t('common.back').toUpperCase()}</button></Link></div>
               </div>
             }
         </div>

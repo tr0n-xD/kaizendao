@@ -24,7 +24,7 @@ export default function GoalPage() {
             <div>{t('welcome.name')} - {t('corp.toyota')}</div>
           </div>
           <div>
-            Engineering DAO: Goals
+            {t('daohome.mydao')}: {t('daohome.goals')}
           </div>
           <GoalPanel goals={goals} />
           <TokenPanel/>
