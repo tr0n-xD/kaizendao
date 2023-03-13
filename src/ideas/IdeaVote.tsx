@@ -1,15 +1,20 @@
 import { Idea } from "../dao/DaoTypes";
+import React from "react";
 
 export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
-    const p = props.idea;
+    const x = props.idea;
     return (
-        <div className='flexColumn justifyStart gap10' style={{width: '500px', color: 'black', backgroundColor: 'mediumspringgreen', borderRadius: '10px', padding: '5px 10px 5px 10px', fontSize: '15px', textAlign: 'left'}}>
-            <div>Proposition: id {p.id}#</div>
-            <div>{p.desc}</div>
-            <div>{p.points} / {p.totalPoints} points</div>
-            <div>Would you like to vote on this proposal?</div>
-            <div>(enter tokens here)</div>
-            <button className='tinyButton' onClick={props.selectOkay}>Okay</button>
+        <div className='flexColumn gap10 bigPanel'>
+            <div>vote for idea #{x.id}</div>
+            <div style={{fontWeight: 'bold'}}>{x.desc}</div>
+            <img alt='' height='75px' src='/icon-ideas.png'/>
+            <div className='flexRow gap5'>
+                <div style={{padding: '3px 5px 0px 5px'}}><img alt='' height='20px' src='/token-32.png'/></div>
+                <div>{x.points} / {x.totalPoints} tokens</div>
+            </div>
+            <div>DAO tokens to spend on this idea:</div>
+            <input className='fieldInput'></input>
+            <button className='tinyButton' onClick={props.selectOkay}>Vote</button>
         </div>
     );
 }
