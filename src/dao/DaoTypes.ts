@@ -4,6 +4,7 @@ export interface Person {
     avatar: string,
     position: string,
     company: string,
+    country: string,
     points: number,
 }
 

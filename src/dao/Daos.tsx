@@ -16,8 +16,18 @@ export default function Daos() {
           {t('daos.title')}
         </div>
         <div className='flexColumn' style={{height: '200px'}}>
-          <Link to='/daocreate'><button className='whiteButton'>{t('daos.create')}</button></Link>
+          <Link to='/daohome'>
+            <button className='whiteButton'>
+              <div className='flexRow'>
+                <img alt='' height='50px' src='/icon-people.png'/>
+                <div>Engineering DAO</div>
+              </div>
+            </button>
+          </Link>
         </div>
+        {/*<div className='flexColumn' style={{height: '200px'}}>*/}
+        {/*  <Link to='/daocreate'><button className='whiteButton'>{t('daos.create')}</button></Link>*/}
+        {/*</div>*/}
       </div>
     </div>
   );

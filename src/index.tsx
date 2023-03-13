@@ -13,6 +13,7 @@ import IdeaPage from "./ideas/IdeaPage";
 import PersonPage from "./people/PersonPage";
 import GoalPage from "./goals/GoalPage";
 import IdeaCreate from "./ideas/IdeaCreate";
+import TeamPage from "./pages/TeamPage";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,6 +28,7 @@ ReactDOM.render(
         <Route path='/ideas/create' element={<IdeaCreate/>}/>
         <Route path='/people' element={<PersonPage/>}/>
         <Route path='/goals' element={<GoalPage/>}/>
+        <Route path='/team' element={<TeamPage/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
