@@ -16,7 +16,7 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
             </div>
             <div>{t('ideavote.amount_to_spend')}</div>
             <input className='fieldInput'></input>
-            <button className='tinyButton' onClick={props.selectOkay}>Vote</button>
+            <button className='tinyButton' onClick={props.selectOkay}>{t('common.vote')}</button>
         </div>
     );
 }
