@@ -75,7 +75,7 @@ export default function IdeaCreate() {
                       <div>Tr0n</div>
                     </div>
 
-                    <div>{t('ideacreate.proposed_by')}</div>
+                    <div>{t('ideacreate.solves_goal')}</div>
 
                     <div className='ovalPanel bg-blue flexRow gap5'>
                       <img alt='' height='25px' src='/icon-goals.png'/>
