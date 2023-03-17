@@ -19,6 +19,9 @@ export function PersonPanel(props: {persons: Person[]}) {
                   {props.persons.map(p =>
                       <PersonRow key={p.walletKey} person={p} selectPerson={() => setSelectedPerson(p)}/>
                   )}
+                <div style={{fontSize: '20px', marginTop: '20px', width: '60%'}}>
+                  DAO members receive new DAO tokens every month based on their seniority (years in the company)
+                </div>
                 <div style={{marginTop: '20px'}}><Link to='/daohome'><button className='whiteButton'>{t('common.back').toUpperCase()}</button></Link></div>
               </div>
             }
