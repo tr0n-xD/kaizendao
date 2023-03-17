@@ -20,8 +20,8 @@ export default function IdeaPage() {
           <div>
             {t('daohome.mydao')}: {t('daohome.ideas')}
           </div>
-          <IdeaPanel ideas={kaizen.ideas} />
-          <TokenPanel />
+          <IdeaPanel ideas={kaizen.ideas.sort((a, b) => b.points - a.points)}/>
+          <TokenPanel/>
         </div>
       </div>
   );

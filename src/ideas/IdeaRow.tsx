@@ -20,7 +20,7 @@ export function IdeaRow(props: {idea: Idea, selectInfo: any, selectVote: any}) {
               <div style={{width: '120px', fontWeight: 'bold', textAlign: 'center'}}>{x.status}</div>
             }
             <button className='tinyButton' onClick={props.selectInfo}>{t('common.info')}</button>
-            <button className='tinyButton' onClick={props.selectVote}>{t('common.vote')}</button>
+            {x.status === 'FUNDING' && <button className='tinyButton' onClick={props.selectVote}>{t('common.vote')}</button>}
         </div>
     );
 }

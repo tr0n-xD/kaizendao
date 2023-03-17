@@ -21,6 +21,9 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
                 kaizen.user.tokens -= amount;
                 console.log(kaizen.user.tokens);
                 idea.points += amount;
+                if (idea.points >= 100) {
+                    idea.status = 'FUNDED';
+                }
                 setPoints(idea.points);
                 setEntry('');
                 setSuccess(true);
