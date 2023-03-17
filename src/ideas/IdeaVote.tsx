@@ -1,8 +1,10 @@
 import { Idea } from "../dao/DaoTypes";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { KaizenDaoContext } from "../dao/DaoContext";
 
 export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
+    const kaizen = useContext(KaizenDaoContext);
     const {t} = useTranslation();
     const [points, setPoints] = useState(props.idea.points);
     const [entry, setEntry] = useState('');
@@ -15,10 +17,14 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
             if (idea.points + amount > 100) {
                 amount = 100 - idea.points;
             }
-            idea.points += amount;
-            setPoints(idea.points);
-            setEntry('');
-            setSuccess(true);
+            if (kaizen.user.tokens >= amount) {
+                kaizen.user.tokens -= amount;
+                console.log(kaizen.user.tokens);
+                idea.points += amount;
+                setPoints(idea.points);
+                setEntry('');
+                setSuccess(true);
+            }
         }
     }
 
@@ -34,17 +40,18 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
             { success ?
                 <div className='flexColumn gap10'>
                     <div>You voted on the idea!</div>
-                    <div>The idea now has {idea.points} tokens</div>
-                    { idea.points >= 100 &&
-                      <div className='flexColumn gap5' style={{fontWeight: 'bold'}}>
-                        <div>
-                            This idea is FUNDED and now goes into a waiting period.
+                    { idea.points >= 100 ?
+                        <div className='flexColumn gap5' style={{fontWeight: 'bold'}}>
+                            <div>
+                                This idea is FUNDED and now goes into a waiting period.
+                            </div>
+                            <div>
+                                Top management will reivew the idea - if they do not VETO the idea
+                                within 72 hours, it becomes ACTIVE and will be implemented :)
+                            </div>
                         </div>
-                        <div>
-                            Top management will reivew the idea - if they do not VETO the idea
-                            within 72 hours, it becomes ACTIVE and will be implemented :)
-                        </div>
-                      </div>
+                    :
+                        <div>The idea now has {idea.points} tokens</div>
                     }
                     <button className='tinyButton' onClick={props.selectOkay}>{t('common.okay')}</button>
                 </div>

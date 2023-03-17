@@ -1,19 +1,13 @@
 import { useTranslation } from "react-i18next";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Person } from "../dao/DaoTypes";
 import { PersonPanel } from "./PersonPanel";
 import TokenPanel from "../components/TokenPanel";
+import { KaizenDaoContext } from "../dao/DaoContext";
 
 export default function PersonPage() {
+  const kaizen = useContext(KaizenDaoContext);
   const {t} = useTranslation();
-
-  const persons : Person[] = [
-    {walletKey: 'nmcn4', name: 'Tr0n', avatar: 'avatar-tr0n.png', position: 'Lead developer', company: 'Restack.AI', country: 'AU', points: 25},
-    {walletKey: 'ik5x4', name: 'Kenji', avatar: 'avatar-kenji.png', position: 'Researcher', company: 'Toyota Motor Corporation', country: 'JP', points: 10},
-    {walletKey: '1fdba', name: 'Alex', avatar: 'avatar-alex.png', position: 'C.E.O.', company: 'Restack.AI', country: 'US', points: 25},
-    {walletKey: 'k7ty3', name: 'Tori', avatar: 'avatar-tori.png', position: 'Engineer', company: 'Toyota Motor Corporation',country: 'JP', points: 10},
-  ]
 
   return (
       <div className="App">
@@ -26,7 +20,7 @@ export default function PersonPage() {
           <div>
             {t('daohome.mydao')}: {t('daohome.people')}
           </div>
-          <PersonPanel persons={persons} />
+          <PersonPanel people={kaizen.people} />
           <TokenPanel/>
         </div>
       </div>

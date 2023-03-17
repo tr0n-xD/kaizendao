@@ -1,19 +1,13 @@
 import { useTranslation } from "react-i18next";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GoalPanel } from "./GoalPanel";
-import { Goal } from "../dao/DaoTypes";
 import TokenPanel from "../components/TokenPanel";
+import { KaizenDaoContext } from "../dao/DaoContext";
 
 export default function GoalPage() {
+  const kaizen = useContext(KaizenDaoContext);
   const {t} = useTranslation();
-
-  const goals : Goal[] = [
-    {id: 1, desc: 'Improving productivity'},
-    {id: 2, desc: 'Reducing costs'},
-    {id: 3, desc: 'Increasing sales'},
-    {id: 4, desc: 'Exploring new business opportunities'},
-  ]
 
   return (
       <div className="App">
@@ -26,7 +20,7 @@ export default function GoalPage() {
           <div>
             {t('daohome.mydao')}: {t('daohome.goals')}
           </div>
-          <GoalPanel goals={goals} />
+          <GoalPanel goals={kaizen.goals} />
           <TokenPanel/>
         </div>
       </div>
