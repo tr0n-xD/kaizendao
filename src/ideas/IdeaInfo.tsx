@@ -17,7 +17,14 @@ export function IdeaInfo(props: {idea: Idea, selectOkay: any}) {
                 <div style={{padding: '3px 5px 0px 5px'}}><img alt='' height='20px' src='/token-32.png'/></div>
                 <div>{x.points} / {x.totalPoints} tokens</div>
             </div>
-            <div style={{fontWeight: 'bold'}}>{t('idea.status')} {x.status}</div>
+            <div style={{fontWeight: 'bold'}}>
+                {t('idea.status')} {x.status}
+            </div>
+            {x.status === 'FUNDED' &&
+                <div style={{fontWeight: 'bold'}}>
+                    (waiting period 72 hours)
+                </div>
+            }
             <button className='tinyButton' onClick={props.selectOkay}>{t('common.okay')}</button>
         </div>
     );

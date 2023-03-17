@@ -2,13 +2,15 @@ import { Idea } from "../dao/DaoTypes";
 import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { KaizenDaoContext } from "../dao/DaoContext";
+import { useNavigate } from "react-router-dom";
 
 export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
     const kaizen = useContext(KaizenDaoContext);
+    const navigate = useNavigate();
     const {t} = useTranslation();
     const [points, setPoints] = useState(props.idea.points);
     const [entry, setEntry] = useState('');
-    const [success, setSuccess] = useState(false);
+    const [voted, setVoted] = useState(false);
     const idea = props.idea;
 
     function doVote() {
@@ -26,7 +28,7 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
                 }
                 setPoints(idea.points);
                 setEntry('');
-                setSuccess(true);
+                setVoted(true);
             }
         }
     }
@@ -40,7 +42,7 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
                 <div style={{padding: '3px 5px 0px 5px'}}><img alt='' height='20px' src='/token-32.png'/></div>
                 <div>{points} / {idea.totalPoints} {t('ideavote.tokens')}</div>
             </div>
-            { success ?
+            { voted ?
                 <div className='flexColumn gap10'>
                     <div>You voted on the idea!</div>
                     { idea.points >= 100 ?
@@ -56,7 +58,7 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
                     :
                         <div>The idea now has {idea.points} tokens</div>
                     }
-                    <button className='tinyButton' onClick={props.selectOkay}>{t('common.okay')}</button>
+                    <button className='tinyButton' onClick={() => navigate('/daohome', {replace: true})}>{t('common.okay')}</button>
                 </div>
                 :
                 <div className='flexColumn gap10'>
