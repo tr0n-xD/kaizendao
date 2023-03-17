@@ -51,7 +51,7 @@ export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
                                 This idea is FUNDED and now goes into a waiting period.
                             </div>
                             <div>
-                                Top management will reivew the idea - if they do not VETO the idea
+                                Top management will review the idea - if they do not VETO the idea
                                 within 72 hours, it becomes ACTIVE and will be implemented :)
                             </div>
                         </div>

@@ -19,12 +19,10 @@ export function IdeaInfo(props: {idea: Idea, selectOkay: any}) {
             </div>
             <div style={{fontWeight: 'bold'}}>
                 {t('idea.status')} {x.status}
-            </div>
             {x.status === 'FUNDED' &&
-                <div style={{fontWeight: 'bold'}}>
-                    (waiting period 72 hours)
-                </div>
+                    ' - waiting period 72 hours'
             }
+            </div>
             <button className='tinyButton' onClick={props.selectOkay}>{t('common.okay')}</button>
         </div>
     );
