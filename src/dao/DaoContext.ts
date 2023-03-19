@@ -16,9 +16,9 @@ const goals : Goal[] = [
 ];
 
 const ideas : Idea[] = [
-    {id: 1, desc: 'Improve material quality', details: 'This task is about improving material quality in the production processes', author: 'Kenji', points: 25, totalPoints: 100, status: 'FUNDING'},
-    {id: 2, desc: 'Change Battery Supplier', details: 'Changing the battery supplier will increase realiability of the production', author: 'Tr0n', points: 5, totalPoints: 100, status: 'FUNDING'},
-    {id: 3, desc: 'Implement Training Program', details: 'A training program will increase the quality of work from our workforce', author: 'Alex', points: 0, totalPoints: 100, status: 'FUNDING'},
+    {id: 1, desc: 'Improve material quality', details: 'This task is about improving material quality in the production processes', goal: 1, author: 'Kenji', points: 25, totalPoints: 100, status: 'FUNDING'},
+    {id: 2, desc: 'Change Battery Supplier', details: 'Changing the battery supplier will increase realiability of the production', goal: 4, author: 'Tr0n', points: 5, totalPoints: 100, status: 'FUNDING'},
+    {id: 3, desc: 'Implement Training Program', details: 'A training program will increase the quality of work from our workforce', goal: 3, author: 'Alex', points: 0, totalPoints: 100, status: 'FUNDING'},
 ]
 
 const testUser: User =

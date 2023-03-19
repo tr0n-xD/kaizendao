@@ -13,6 +13,7 @@ export interface Idea {
     desc: string,
     details: string,
     author: string,
+    goal: number,
     points: number,
     totalPoints: number,
     status: string,

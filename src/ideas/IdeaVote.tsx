@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 export function IdeaVote(props: {idea: Idea, selectOkay: any}) {
     const kaizen = useContext(KaizenDaoContext);
-    const navigate = useNavigate();
     const {t} = useTranslation();
+    const navigate = useNavigate();
     const [points, setPoints] = useState(props.idea.points);
     const [entry, setEntry] = useState('');
     const [voted, setVoted] = useState(false);

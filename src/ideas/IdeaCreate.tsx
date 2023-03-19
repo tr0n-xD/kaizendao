@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import TokenPanel from "../components/TokenPanel";
 import { useTranslation } from "react-i18next";
+import { KaizenDaoContext } from "../dao/DaoContext";
+import { Idea } from "../dao/DaoTypes";
 
 export default function IdeaCreate() {
+    const kaizen = useContext(KaizenDaoContext);
     const {t} = useTranslation();
+    const navigate = useNavigate();
     const [desc, setDesc] = useState<string>('');
     const [details, setDetails] = useState<string>('');
 
@@ -16,6 +20,21 @@ export default function IdeaCreate() {
 
     const nextPage = async () => {
         setPage((page + 1) % 16);
+    }
+
+    function createIdea() {
+        let newIdea : Idea = {
+            id: kaizen.ideas.length + 1,
+            desc: desc,
+            details: details,
+            author: 'You',
+            goal: 1,
+            status: 'FUNDING',
+            points: 0,
+            totalPoints: 100,
+        }
+        kaizen.ideas = [...kaizen.ideas, newIdea];
+        navigate('/daohome', {replace: true})
     }
 
     return (
@@ -108,7 +127,7 @@ export default function IdeaCreate() {
                       <div>100</div>
                     </div>
 
-                    <button className='ovalButton bg-blue' style={{color: 'black'}}>
+                    <button className='ovalButton bg-blue' style={{color: 'black'}} onClick={createIdea}>
                       <div className='flexRow gap5'>
                         <img alt='' height='25px' src='/icon-ideas.png'/>
                         <div>{t('ideacreate.create')}</div>
